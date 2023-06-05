@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
             duration: gameDuration,
           )
         : Scaffold(
-            backgroundColor: Colors.black45,
+            backgroundColor: Colors.black26,
             body: SafeArea(
               child: SingleChildScrollView(
                 child: Column(
@@ -141,14 +141,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                     } else {
                                       cardFlips[_previousIndex] = false;
                                       cardFlips[index] = false;
-                                      debugPrint("$cardFlips");
-                                      debugPrint("$left");
-                                      print(cardFlips.every((t) => t == false));
+                                  
                                       setState(() {
                                         left -= 1;
                                       });
                                       if (cardFlips.every((t) => t == false)) {
-                                        debugPrint("Won");
                                         Future.delayed(
                                             const Duration(milliseconds: 160),
                                             () {
